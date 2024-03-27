@@ -26,8 +26,8 @@ pip install llvmlite
 2. Clone the repository and navigate to the project directory.
 
 ```bash
-git clone <repository_url>
-cd <project_directory>
+git clone https://github.com/AKnodel/LLVM-Power-Consumption-Ranking-Pass.git
+cd LLVM-Power-Consumption-Ranking-Pass
 ```
 
 ## Usage
