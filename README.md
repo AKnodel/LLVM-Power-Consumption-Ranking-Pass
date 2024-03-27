@@ -66,16 +66,16 @@ Ensure that the `tests` directory contains the Python files you want to process.
 
 The power consumption score is calculated based on the following factors:
 
-- **Cycle Count**: The number of back edges in the control-flow graph of the function. This is calculated using the `getNumBackedges()` function.
+- **Cycle Count**: This metric represents the number of back edges in the control-flow graph of the function. Back edges are those that point to any of its predecessors (creating a loop). A higher cycle count can indicate more looping and potentially higher power consumption. This is calculated using the `getNumBackedges()` function.
 
-- **Cyclomatic Complexity**: The cyclomatic complexity of the function. This is calculated using the `calculateCyclomaticComplexity()` function.
+- **Cyclomatic Complexity**: Cyclomatic complexity is a software metric used to indicate the complexity of a program. It directly measures the number of linearly independent paths through a program’s source code. A higher cyclomatic complexity denotes a more complex program, which could lead to higher power consumption. This is calculated using the `calculateCyclomaticComplexity()` function.
 
-- **Loop Nesting Depth**: The nesting depth of loops in the function. This is calculated using the `calculateLoopNestingDepth()` function.
+- **Loop Nesting Depth**: This metric calculates the depth of nested loops within a function. Deeply nested loops can lead to higher power consumption due to repeated computation. This is calculated using the `calculateLoopNestingDepth()` function.
 
-- **Memory Access Patterns**: The score based on memory access patterns. This is calculated using the `calculateMemoryAccessScore()` function.
+- **Memory Access Patterns**: This score is based on the patterns of memory access within the function. Frequent memory accesses or accesses to large amounts of data can lead to higher power consumption. This is calculated using the `calculateMemoryAccessScore()` function.
 
-- **Function Call Depth and Recursion**: The score based on function call depth and recursion. This is calculated using the `calculateFunctionCallScore()` function.
+- **Function Call Depth and Recursion**: This score is based on the depth of function calls and recursion within the function. Functions that call many other functions or involve recursive calls can have higher power consumption. This is calculated using the `calculateFunctionCallScore()` function.
 
-- **Floating-Point Operations**: The score based on the number of floating-point operations. This is calculated using the `calculateFloatingPointOperationsScore()` function.
+- **Floating-Point Operations**: This score is based on the number of floating-point operations within the function. Floating-point operations are often more computationally intensive than integer operations, leading to higher power consumption. This is calculated using the `calculateFloatingPointOperationsScore()` function.
 
 Each factor is assigned a weight, and the overall power consumption score for the function is the weighted sum of the scores for each factor. The weights for each factor are defined in the `calculatePowerScore()` function. The power consumption score for each function is printed to the standard error stream in the `runOnModule()` method.
