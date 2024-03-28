@@ -17,9 +17,9 @@ This project involves designing an LLVM pass to partition a Python application i
 ```bash
 sudo apt-get update
 sudo apt-get install python3.10
-sudo apt-get install cython
 sudo apt-get install clang
 sudo apt-get install llvm
+pip install cython
 pip install llvmlite
 ```
 
