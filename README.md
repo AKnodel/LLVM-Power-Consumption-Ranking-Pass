@@ -5,9 +5,9 @@ This project involves designing an LLVM pass to partition a Python application i
 ## Prerequisites
 
 - Python 3.10
-- Cython
 - Clang
 - LLVM
+- Cython
 - llvmlite
 
 ## Installation
