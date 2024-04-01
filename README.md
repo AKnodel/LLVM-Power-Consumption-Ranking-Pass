@@ -19,6 +19,9 @@ sudo apt-get update
 sudo apt-get install python3.10
 sudo apt-get install clang
 sudo apt-get install llvm
+```
+
+```bash
 pip install cython
 pip install llvmlite
 ```
