@@ -22,7 +22,7 @@ sudo apt-get install llvm
 ```
 
 ```bash
-pip install cython
+pip install Cython
 pip install llvmlite
 ```
 
