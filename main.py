@@ -10,7 +10,7 @@ def compile_to_c(file_path):
 
 def compile_to_llvm(c_file_path):
     # Compile the C code to LLVM IR using Clang
-    llvm_file_path = os.path.splitext(c_file_path)[0] + ".so"
+    llvm_file_path = os.path.splitext(c_file_path)[0] + ".ll"
     subprocess.check_call(["clang", "-S", "-emit-llvm", "-I/usr/include/python3.10", c_file_path, "-o", llvm_file_path])
     return llvm_file_path
 
